@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:;base64,=" />
+    <title>CSCE-679 | HW2</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <h1>Assignment 2</h1>
+    <hr />
+
+    <h2>Level 1</h2>
+    <label>Select Temperature Type to View: </label>
+    <label>
+      <input
+        type="radio"
+        name="temperature_l1"
+        value="max_temperature"
+        checked
+      />
+      Max Temperature
+    </label>
+
+    <label>
+      <input type="radio" name="temperature_l1" value="min_temperature" /> Min
+      Temperature </label
+    ><br />
+
+    <svg id="level-1"></svg>
+
+    <hr />
+    <h2>Level 2</h2>
+    <label>Select Temperature Type to View: </label>
+    <label>
+      <input
+        type="radio"
+        name="temperature_l2"
+        value="max_temperature"
+        checked
+      />
+      Max Temperature
+    </label>
+
+    <label>
+      <input type="radio" name="temperature_l2" value="min_temperature" /> Min
+      Temperature </label
+    ><br />
+
+    <div id="level-2-container">
+      <div style="position: relative; width: 1000px; height: 800px">
+        <!-- This will hold our grid -->
+        <svg width="1000" height="800" id="grid-container"></svg>
+
+        <!-- This will hold our axes -->
+        <svg
+          width="1000"
+          height="800"
+          style="position: absolute; top: 0; left: 0; pointer-events: none"
+        >
+          <g id="x-axis" transform="translate(50, 40)"></g>
+          <g id="y-axis" transform="translate(40, 50)"></g>
+          <g id="color-legend" transform="translate(940, 80)"></g>
+        </svg>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
